@@ -1,22 +1,22 @@
 <!-- Author: Diego Alberto Quiroz García -->
 <!-- Desarrollo de Aplicaciones web -->
 <!-- 3 de febrero de 2021 -->
-Proyecto: Resu.me
+<!-- Proyecto: Resu.me -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Diego</title>
+	<title>Resu.me</title>
 </head>
 <body>
 	<!-- Navigation of the landing page -->
 	<nav class="nav container">
 		<ul class="nav__menu">
-			<li><a href="#about">ABOUT</a></li>
-			<li><a href="#features">FEATURES</a></li>
-			<li><a href="#images">IMAGES</a></li>
-			<li><a href="#contact">CONTACT US</a></li>
+			<li><a href="#about">NOSOTROS</a></li>
+			<li><a href="#features">SERVICIOS</a></li>
+			<li><a href="#images">IMÁGENES</a></li>
+			<li><a href="#contact">CONTÁCTANOS</a></li>
 		</ul>
 		<img class="nav__logo" src="" alt="Resu.me logo">
 		<ul class="nav__menu nav__menu--users">
@@ -28,8 +28,9 @@ Proyecto: Resu.me
 	<!-- Header of the landing page -->
 	<header class="header container">
 		<section class="header__title">
-			<h1><span style="color: #F5DF4D;">Your</span> portfolio, made easy</h1>
-			<h5>Meet the only CV management platform you need</h5>
+			<h1><span style="color: #F5DF4D;">Tu <br> portafolio</span>, <br> hecho fácil</h1>
+			<h4>Conoce la única plataforma de CV <br>
+ que necesitarás</h4>
 		</section>
 
 		<section class="header__image">
@@ -41,55 +42,62 @@ Proyecto: Resu.me
 	<main>
 
 		<!-- About section (mission and vision) -->
-		<section class="about container">
+		<section class="about container" id="about">
 			<div class="about__title">
-				<h4>A CERCA DE</h4>
-				<h2></h2>
+				<h5>NOSOTROS</h5>
+				<h1>Nuestra misión eres tú</h1>
 			</div>
 			<div class="about__item">
-				<h3>Misión</h3>
+				<h2>Misión</h2>
 				<p>Consectetur eaque ex sunt reprehenderit culpa reprehenderit Quos iste quo placeat illum molestiae ullam? Quo.</p>
 			</div>
 			<div class="about__item">
-				<h3>Visión</h3>
+				<h2>Visión</h2>
 				<p>Elit nihil velit quod ad sunt, officia. Tempore reiciendis aspernatur facere beatae officia Id repellat!</p>
 			</div>
 		</section>
 
 		<!-- Description of services -->
-		<section class="features container">
+		<section class="features container" id="features">
 			<div class="features__title">
-				<h4>SERVICIOS</h4>
-				<h2>¿Listo para un portafolio y CV reales?</h2>
+				<h5>SERVICIOS</h5>
+				<h1>¿Listo para un portafolio y CV reales?</h1>
 			</div>
 			<div class="features__item">
-				<h3></h3>
+				<h3>Feature 1</h3>
 				<p>Lorem dolor hic maxime deserunt fuga Esse quo nobis iste.</p>
 			</div>
 			<div class="features__item">
-				<h3></h3>
+				<h3>Feature 2</h3>
 				<p>Ipsum optio voluptate minima nam dolorum, vel? Est doloribus perspiciatis</p>
 			</div>
 			<div class="features__item">
-				<h3></h3>
+				<h3>Feature 3</h3>
 				<p>Consectetur neque iste sequi asperiores assumenda? Dolorem illo aspernatur voluptates?</p>
 			</div>
 		</section>
 
 		<!-- Image gallery -->
-		<section class="gallery container">
+		<section class="gallery container" id="gallery">
 			<div class="gallery__title">
-				<h4>IMAGENES</h4>
-				<p>Mira a otros utilizando Resu.me</p>
+				<h5>IMÁGENES</h5>
+				<h1>Mira a otros utilizando Resu.me</h1>
 			</div>
 		</section>
 
 		<!-- Contact form -->
-		<section class="contact container">
+		<section class="contact container" id="contact">
 			<div class="contact__title">
-				<h4></h4>
-				<p>¿Nos necesitas? Contáctanos</p>
+				<h5>CONTACTO</h5>
+				<h1>¿Nos necesitas? Contáctanos</h1>
 			</div>
+
+			<form action="POST" class="contact__form">
+				<input id="name" type="text">
+				<input id="email" type="email">
+				<textarea id="message" name="" cols="30" rows="10"></textarea>
+				<input id="suscribe" type="checkbox">
+				<input id="submit" type="button">
 		</section>
 	</main>
 
