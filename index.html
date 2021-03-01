@@ -4,31 +4,31 @@
 <!-- Proyecto: Resu.me -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Resu.me</title>
 </head>
 <body>
-	<!-- Navigation of the landing page -->
-	<nav class="nav container">
-		<ul class="nav__menu">
-			<li><a href="#about">NOSOTROS</a></li>
-			<li><a href="#features">SERVICIOS</a></li>
-			<li><a href="#images">IMÁGENES</a></li>
-			<li><a href="#contact">CONTÁCTANOS</a></li>
-		</ul>
-		<img class="nav__logo" src="" alt="Resu.me logo">
-		<ul class="nav__menu nav__menu--users">
-			<li><a href="">LOG IN</a></li>
-			<li><a href="">SIGN UP</a></li>
-		</ul>
-	</nav>
 
 	<!-- Header of the landing page -->
 	<header class="header container">
+		<!-- Navigation of the landing page -->
+		<nav class="nav">
+			<ul class="nav__menu">
+				<li><a href="#about">NOSOTROS</a></li>
+				<li><a href="#features">SERVICIOS</a></li>
+				<li><a href="#images">IMÁGENES</a></li>
+				<li><a href="#contact">CONTÁCTANOS</a></li>
+			</ul>
+			<img class="nav__logo" src="" alt="Resu.me logo">
+			<ul class="nav__menu nav__menu--users">
+				<li><a href="">LOG IN</a></li>
+				<li><a href="">SIGN UP</a></li>
+			</ul>
+		</nav>
 		<section class="header__title">
-			<h1><span style="color: #F5DF4D;">Tu <br> portafolio</span>, <br> hecho fácil</h1>
+			<h1><span style="color: #FFD369;">Tu <br> portafolio</span>, <br> hecho fácil</h1>
 			<h4>Conoce la única plataforma de CV <br>
  que necesitarás</h4>
 		</section>
@@ -63,22 +63,56 @@
 				<h5>SERVICIOS</h5>
 				<h1>¿Listo para un portafolio y CV reales?</h1>
 			</div>
-			<div class="features__item">
-				<h3>Feature 1</h3>
-				<p>Lorem dolor hic maxime deserunt fuga Esse quo nobis iste.</p>
+			<div class="features__list">
+				
+				<div class="features__item">
+					<i class="far fa-file"></i>
+					<h3>CV automático</h3>
+					<p>Generamos un Currículum Vitae basado en tu información.</p>
+				</div>
+				<div class="features__item">
+					<i class="fas fa-server"></i>
+					<h3>Alojamos tu portafolio web</h3>
+					<p>Tu portafolio estará siempre en línea dentro de nuestro hosting.</p>
+				</div>
+				<div class="features__item">
+					<i class="fab fa-linkedin"></i>
+					<h3>Conectamos tus redes</h3>
+					<p>Actualizamos tu información con base en tu LinkedIn, Github y más.</p>
+				</div>
 			</div>
-			<div class="features__item">
-				<h3>Feature 2</h3>
-				<p>Ipsum optio voluptate minima nam dolorum, vel? Est doloribus perspiciatis</p>
-			</div>
-			<div class="features__item">
-				<h3>Feature 3</h3>
-				<p>Consectetur neque iste sequi asperiores assumenda? Dolorem illo aspernatur voluptates?</p>
-			</div>
+
+			<table class="features__table">
+				<tr class="features__table__row">
+					<th>Servicio</th>
+					<th>Resu.me</th>
+					<th>Competencia</th>
+				</tr>
+				<tr class="features__table__row">
+					<td>Alojamiento gratis de tu portafolio</td>
+					<td><i class="fas fa-check" style="color: #ffd369"></i></td>
+					<td><i class="fas fa-times"></i></td>
+				</tr>
+				<tr class="features__table__row">
+					<td>Multiples diseños para tu portafolio</td>
+					<td><i class="fas fa-check" style="color: #ffd369"></i></td>
+					<td><i class="fas fa-check"></i></td>
+				</tr>
+				<tr class="features__table__row">
+					<td>Soporte de dominio personalizado</td>
+					<td><i class="fas fa-check" style="color: #ffd369"></i></td>
+					<td><i class="fas fa-check"></i></td>
+				</tr>
+				<tr class="features__table__row">
+					<td>Generador de CV automático</td>
+					<td><i class="fas fa-check" style="color: #ffd369"></i></td>
+					<td><i class="fas fa-times"></i></td>
+				</tr>
+			</table>
 		</section>
 
 		<!-- Image gallery -->
-		<section class="gallery container" id="gallery">
+		<section class="gallery container" id="images">
 			<div class="gallery__title">
 				<h5>IMÁGENES</h5>
 				<h1>Mira a otros utilizando Resu.me</h1>
@@ -96,21 +130,42 @@
 		<section class="contact container" id="contact">
 			<div class="contact__title">
 				<h5>CONTACTO</h5>
-				<h1>¿Nos necesitas? Contáctanos</h1>
+				<h1>¿Nos necesitas? <br> Contáctanos</h1>
 			</div>
 
 			<form action="POST" class="contact__form">
-				<input id="name" type="text">
-				<input id="email" type="email">
-				<textarea id="message" name="" cols="30" rows="10"></textarea>
-				<input id="suscribe" type="checkbox">
-				<input id="submit" type="button">
+				<input class="contact__form__input" id="name" type="text" placeholder="Sirius Black">
+ 				<input class="contact__form__input" id="email" type="email" placeholder="sirius@gmail.com">
+				<textarea class="contact__form__input" id="message" name="" cols="30" rows="10"  placeholder="Message..."></textarea>
+				<label for="suscribe">Suscribir a lista de correo <input id="suscribe" type="checkbox"></label>
+				<input class="contact__form__input" id="submit" type="button" value="Enviar">
 		</section>
 	</main>
 
 	<!-- Foot of the landing page -->
-	<footer>
-
+	<footer class="footer container">
+			<div class="footer--cr">
+				<p>Copyright® 2021 DAQG Resu.me</p>
+			</div>
+			<div class="footer--social">
+				<ul>
+					<li>
+						<a href="https://twitter.com">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://facebook.com">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://instagram.com">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
 	</footer>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
