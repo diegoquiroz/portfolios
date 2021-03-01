@@ -1,18 +1,20 @@
 /* Author: Diego Alberto Quiroz García */
 /* Desarrollo de Aplicaciones Web */
-/* 3 de febrero de 2021 */
+/* 1 de febrero de 2021 */
 /* Proyecto: Resu.me */
 
 
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto&display=swap');
 
+/* Declaration of variables */
 :root {
 	--primary-color: 255, 211, 105;
-	--secondary-color: 57, 62, 70;
-	--text-color: #555555;
+	--secondary-color: 34, 40, 49;
+	--text-color: #393E46;
 }
 
+/* Normalization of content */
 body {
 	color: var(--text-color);
 	font-family: 'Noto Sans', sans-serif;
@@ -41,10 +43,12 @@ a {
 	padding: 0 8%;
 }
 
+/* Navigation section */
+
 .nav {
 	grid-column: 1/3;
 	display: flex;
-	flex-direction: row;
+	flex-flow: row wrap;
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 1em;
@@ -72,22 +76,49 @@ a {
 	box-shadow: 2px 2px;
 }
 
+.nav__menu--users li:last-child:hover {
+	box-shadow: 4px 4px;
+}
+
+.nav__logo {
+	height: 40px;
+}
+
 .nav li:hover {
 	border-bottom: 3px solid rgb(var(--primary-color));
 }
 
+/* Header section */
+@keyframes heroBackground {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 100% 0;
+	}
+}
+
 .header {
-	background-image: url('../images/pattern.png');
-	background-size: cover;
+	background-color: #FFFFFF;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255,255,255, .87)), url('../images/pattern.png');
+	background-size: 120%;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: space-around;
 	padding-bottom: 5em;
+	animation: heroBackground 3s linear infinite alternate;
 }
 
 .header__title h1 {
 	font-size: 60px;
 }
 
+.header__image {
+	align-self: center;
+	width: 400px;
+}
+
+/* Style of about section */ 
 .about {
 	background-color: rgba(var(--primary-color), .3);
 	padding-top: 3em;
@@ -102,9 +133,7 @@ a {
 	grid-column: 1/3;
 }
 
-.about__item {
-}
-
+/* Style of features */
 .features {
 	padding-top: 3em;
 	padding-bottom: 3em;
@@ -125,6 +154,7 @@ a {
 	column-gap: 10%;
 }
 
+/* Table of services */
 .features__table {
 	border: 1px solid rgba(var(--secondary-color));
 	border-radius: 5px;
@@ -139,6 +169,7 @@ th, td {
 	padding: 15px 10px;
 }
 
+/* Style of the images section */
 .gallery {
 	background-color: #F9F9F9;
 	display: grid;
@@ -158,20 +189,17 @@ th, td {
 	height: 300px;
 }
 
-@keyframes display {
+/* Keyframes to animate the carousel */
+@keyframes carousel {
 	0% {
 		transform: translateX(200px);
 		opacity: 0;
 	}
 	10% {
-		ransform: translateX(0);
-		opacity: 1;
-	}
-	20% {
 		transform: translateX(0);
 		opacity: 1;
 	}
-	30% {
+	20% {
 		transform: translateX(-200px);
 		opacity: 0;
 	}
@@ -186,19 +214,35 @@ th, td {
 	top: 0;
 	left: calc(50% - 250px);
 	opacity: 0;
-	animation: display 10s infinite;
+	animation: carousel 18s infinite;
 }
 
 .gallery__carousel__image:nth-child(2) {
-  animation-delay: 2s;
+	animation-delay: 2s;
 }
 .gallery__carousel__image:nth-child(3) {
-  animation-delay: 4s;
+	animation-delay: 4s;
 }
 .gallery__carousel__image:nth-child(4) {
-  animation-delay: 6s;
+	animation-delay: 6s;
+}
+.gallery__carousel__image:nth-child(5) {
+	animation-delay: 8s;
+}
+.gallery__carousel__image:nth-child(6) {
+	animation-delay: 10s;
+}
+.gallery__carousel__image:nth-child(7) {
+	animation-delay: 12s;
+}
+.gallery__carousel__image:nth-child(8) {
+	animation-delay: 14s;
+}
+.gallery__carousel__image:nth-child(9) {
+	animation-delay: 16s;
 }
 
+/* Contact section */
 .contact {
 	text-align: center;
 }
@@ -220,9 +264,15 @@ th, td {
 #submit {
 	background-color: rgb(var(--primary-color));
 	border: none;
-	box-shadow: 2px 2px 
+	box-shadow: 2px 2px;
 }
 
+#submit:hover {
+	cursor: pointer;
+	box-shadow: 4px 4px;
+}
+
+/* Footer section */
 .footer {
 	background-color: #393e46;
 	color: #FFFFFF;
@@ -239,5 +289,5 @@ th, td {
 }
 
 .footer--social a:hover {
-	color: rgb(var(--primary-color))
+	color: rgb(var(--primary-color));
 }
