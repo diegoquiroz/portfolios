@@ -3,6 +3,6 @@
 
 ---
 
-Intento de deiseñar una UI.
+Imagen del sitio
 
 ![Prototype](https://raw.githubusercontent.com/diegoquiroz/porfolios/main/prototype.png?raw=true)
