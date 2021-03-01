@@ -5,4 +5,4 @@
 
 Imagen del sitio
 
-![Prototype](https://raw.githubusercontent.com/diegoquiroz/porfolios/main/prototype.png?raw=true)
+![Prototype](https://i.imgur.com/zH2VKjH.png)
