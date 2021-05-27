@@ -261,15 +261,81 @@ th, td {
 	padding: 5px 10px;
 }
 
-#submit {
+.contact__form__input--button {
 	background-color: rgb(var(--primary-color));
 	border: none;
 	box-shadow: 2px 2px;
 }
 
-#submit:hover {
+.contact__form__input--button:hover {
 	cursor: pointer;
 	box-shadow: 4px 4px;
+}
+
+/* Styles section */ 
+
+.styles {
+	text-align: center;
+}
+
+.styles__toggle {
+	background-color: rgb(var(--primary-color));
+	border: none;
+	box-shadow: 2px 2px;
+}
+
+.styles__toggle {
+	cursor: pointer;
+	box-shadow: 4px 4px;
+}
+
+
+/* Blog section */ 
+.articles--list {
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding-top: 3em;
+	padding-bottom: 3em;
+	text-align: center;
+}
+
+.articles--list__title {
+	grid-column: 1/4;
+}
+
+.articles__form {
+	grid-column: 1/4;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+#button--create {
+	grid-column: 4/4;
+}
+
+.articles__form__input {
+	margin-top: 25px;
+	background-color: transparent;
+	border: 2px solid rgba(var(--secondary-color), .5);
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+
+.articles__form--button {
+	background-color: rgb(var(--primary-color));
+	border: none;
+	box-shadow: 2px 2px;
+}
+
+.articles__form--button:hover {
+	cursor: pointer;
+	box-shadow: 4px 4px;
+}
+
+.articles--create {
+	display: none;
 }
 
 /* Footer section */
@@ -291,3 +357,4 @@ th, td {
 .footer--social a:hover {
 	color: rgb(var(--primary-color));
 }
+

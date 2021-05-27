@@ -1,4 +1,7 @@
 <?php
+// Author: Diego Quiroz
+
+namespace App;
 
 class DatabaseController {
 
@@ -15,13 +18,18 @@ class DatabaseController {
     * database using data from .env
     */
     public function __construct() {
-        $this->host = getenv('DB_HOST');
-        $this->port = getenv('DB_PORT');
-        $this->database = getenv('DB_DATABASE');
-        $this->user = getenv('DB_USER');
-        $this->password = getenv('DB_PASSWORD');
+        //$this->host = getenv('DB_HOST');
+        //$this->port = getenv('DB_PORT');
+        //$this->database = getenv('DB_DATABASE');
+        //$this->user = getenv('DB_USER');
+        //$this->password = getenv('DB_PASSWORD');
+        $this->host = 'mysql';
+        $this->port = 3306;
+        $this->database = 'project';
+        $this->user = 'root';
+        $this->password = 'root';
         
-        $this->connection = new PDO (
+        $this->connection = new \PDO (
             "mysql:host=$this->host;port=$this->port;charset=utf8mb4;dbname=$this->database",
             $this->user,
             $this->password

@@ -1,0 +1,85 @@
+<!-- Author: Diego Alberto Quiroz García -->
+<!-- Desarrollo de Aplicaciones web -->
+<!-- 15 de mayo de 2021 -->
+<!-- Proyecto: Resu.me -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Resu.me | blog</title>
+</head>
+<body>
+
+	<!-- Header of the landing page -->
+	<header class="header container">
+		<!-- Navigation of the landing page -->
+		<nav class="nav">
+			<ul class="nav__menu">
+				<li><a href="/#about">NOSOTROS</a></li>
+				<li><a href="/#features">SERVICIOS</a></li>
+				<li><a href="/#images">IMÁGENES</a></li>
+				<li><a href="/#contact">CONTÁCTANOS</a></li>
+				<li><a href="#">BLOG</a></li>
+			</ul>
+			<img class="nav__logo" src="static/images/ResumeLogo.png" alt="Resu.me logo">
+			<ul class="nav__menu nav__menu--users">
+				<li><a href="">LOG IN</a></li>
+				<li><a href="">SIGN UP</a></li>
+			</ul>
+		</nav>
+
+	</header>
+
+	<!-- Body of the landing page -->
+	<main>
+		<section class="articles--list container" id="articles">
+			<div class="articles--list__title">
+				<button class="articles__form__input articles__form--button" id="button--create">Crear Artículo</button>
+				<h5>Articles</h5>
+				<h1>Our blog</h1>
+			</div>
+		</section>
+		<section class="articles--create container" id="articles--create">
+			<form class="articles__form">
+				<input class="articles__form__input" id="name" type="text" placeholder="Article title">
+ 				<input class="articles__form__input" id="description" type="email" placeholder="Article description">
+				<input class="articles__form__input" id="image" type="text" placeholder="Image URL">
+			</form>
+			<button class="articles__form__input articles__form--button" id="articles__form--button">Enviar</button>
+		</section>
+	</main>
+
+	<!-- Foot of the landing page -->
+	<footer class="footer container">
+			<div class="footer--cr">
+				<p>Copyright® 2021 DAQG Resu.me</p>
+			</div>
+			<div class="footer--social">
+				<ul>
+					<li>
+						<a href="https://twitter.com" target="blank">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://facebook.com" target="_blank">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://instagram.com" target="_blank">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+	</footer>
+
+    
+	<script src="static/js/blog.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="static/css/normalize.css">
+	<link rel="stylesheet" href="static/css/styles.css">
+</body>
+</html>

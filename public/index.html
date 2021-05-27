@@ -20,6 +20,7 @@
 				<li><a href="#features">SERVICIOS</a></li>
 				<li><a href="#images">IMÁGENES</a></li>
 				<li><a href="#contact">CONTÁCTANOS</a></li>
+				<li><a href="blog">BLOG</a></li>
 			</ul>
 			<img class="nav__logo" src="static/images/ResumeLogo.png" alt="Resu.me logo">
 			<ul class="nav__menu nav__menu--users">
@@ -42,25 +43,25 @@
 		<!-- About section (mission and vision) -->
 		<section class="about container" id="about">
 			<div class="about__title">
-				<h5>NOSOTROS</h5>
-				<h1>Nuestra misión eres tú</h1>
+				<h5 id="about--titulo"></h5>
+				<h1 id="about--sub"></h1>
 				<p>Resu.me es una plataforma para crear portafolios virtuales sin necesidad de preocuparte de mantener, diseñar, crear y lanzar un sitio web. Inicia tu portafolio virtual como todo un profesional.</p>
 			</div>
 			<div class="about__item">
-				<h2>Misión</h2>
-				<p>Ayudar a profesionales a tener un portafolio virtual, blog y currículum de manera fácil y escalable.</p>
+				<h2 id="mision--titulo"></h2>
+				<p id="mision--cont"></p>
 			</div>
 			<div class="about__item">
-				<h2>Visión</h2>
-				<p>Ser la plataforma líder en la generación de currículums, resúmenes y portafolios para los profesionales de mañana.</p>
+				<h2 id="vision--titulo"></h2>
+				<p id="vision--cont"></p>
 			</div>
 		</section>
 
 		<!-- Description of services -->
 		<section class="features container" id="features">
 			<div class="features__title">
-				<h5>SERVICIOS</h5>
-				<h1>¿Listo para un portafolio y CV reales?</h1>
+				<h5 id="servicios--titulo"></h5>
+				<h1 id="servicios--sub"></h1>
 			</div>
 			<div class="features__list">
 				
@@ -113,8 +114,8 @@
 		<!-- Image gallery -->
 		<section class="gallery container" id="images">
 			<div class="gallery__title">
-				<h5>IMÁGENES</h5>
-				<h1>Mira a otros utilizando Resu.me</h1>
+				<h5 id="imagenes--titulo"></h5>
+				<h1 id="imagenes--sub"></h1>
 			</div>
 
 			<div class="gallery__carousel">
@@ -133,16 +134,28 @@
 		<!-- Contact form -->
 		<section class="contact container" id="contact">
 			<div class="contact__title">
-				<h5>CONTACTO</h5>
+				<h5 id="contacto--titulo"></h5>
 				<h1>¿Nos necesitas? <br> Contáctanos</h1>
 			</div>
 
-			<form action="POST" class="contact__form">
+			<p id="contact__response"></p>
+
+			<form class="contact__form">
 				<input class="contact__form__input" id="name" type="text" placeholder="Sirius Black">
  				<input class="contact__form__input" id="email" type="email" placeholder="sirius@gmail.com">
 				<textarea class="contact__form__input" id="message" name="" cols="30" rows="10"  placeholder="Mensaje..."></textarea>
 				<label for="suscribe">Suscribir a lista de correo <input id="suscribe" type="checkbox"></label>
-				<input class="contact__form__input" id="submit" type="button" value="Enviar">
+			</form>
+			<button class="contact__form__input contact__form__input--button" id="contact__form__input--button">Enviar</button>
+		</section>
+
+		<section class="styles container">
+			<div class="styles__title">
+				<h5 id="estilos--titulo"></h5>
+				<h1 id="estilos--sub"></h1>
+			</div>
+			
+			<button class="styles__toggle" id="styles__toggle">Toggle</button>
 		</section>
 	</main>
 
@@ -175,5 +188,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 	<link rel="stylesheet" href="static/css/normalize.css">
 	<link rel="stylesheet" href="static/css/styles.css">
+    <script src="static/js/index.js"></script>
 </body>
 </html>
