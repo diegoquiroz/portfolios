@@ -1,12 +1,13 @@
 <?php
 
-//include 'app/DatabaseController.php';
 require 'app/models/ArticleController.php';
 require 'app/models/MessageController.php';
 require 'app/models/ContentsController.php';
-require 'app/DatabaseController.php';
+require 'app/framework/DatabaseController.php';
+require 'app/framework/Route.php';
+require 'app/framework/RouteController.php';
 
-use App\DatabaseController;
+use App\Framework\DatabaseController;
 
 $mysql = (new DatabaseController())->getConnection();
 

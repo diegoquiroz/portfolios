@@ -1,7 +1,7 @@
 <?php
 // Author: Diego Quiroz
 
-namespace App;
+namespace App\Framework;
 
 class DatabaseController {
 

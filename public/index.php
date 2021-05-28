@@ -3,37 +3,41 @@
 
 require '../app.php';
 
-use App\ArticleController;
-use App\MessageController;
-use App\ContentsController;
+use App\Models\ArticleController;
+use App\Models\MessageController;
+use App\Models\ContentsController;
+use App\Framework\Route;
+use App\Framework\RouteController;
 
-$requestMethod = $_SERVER["REQUEST_METHOD"];
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$uri = explode( '/', $uri );
+$routes = [
+    new Route('/', 'GET', function () {
+        readfile('templates/index.html');
+    }),
+    new Route('/blog', 'GET', function () {
+        readfile('templates/blog.html');
+    }),
 
-if($uri[1] === '') {
-    readfile('index.html');
-    exit();
-} else if($uri[1] === 'blog') {
-    readfile('blog.html');
-    exit();
-}
+    new Route('/api', 'POST', function () {
+		$model = new ArticleController($mysql);
+		$data = (array) json_decode(file_get_contents('php://input'), TRUE);
+		echo $model->insert($data);
+    }),
+];
+
+$router = new RouteController($routes);
+
 if ($uri[1] !== 'api') {
     header("HTTP/1.1 404 Not Found");
     exit();
 } else {
 	if ($uri[2] === 'articles') {
-		$model = new ArticleController($mysql);
 
 		if ($requestMethod === 'POST') {
 
-			$data = (array) json_decode(file_get_contents('php://input'), TRUE);
-			echo $model->insert($data);
 
 		} elseif ($requestMethod === 'PUT') {
 
 			$data = (array) json_decode(file_get_contents('php://input'), TRUE);
-			
 			echo $model->edit((int) $uri[3], $data);
 
 		} elseif ($requestMethod === 'GET') {
