@@ -3,10 +3,12 @@
 
 namespace App\Models;
 
+use App\Framework\DatabaseController;
+
 class MessageController {
 
-    public function __construct($connection) {
-    	$this->connection = $connection;
+    public function __construct() {
+		$this->connection = (new DatabaseController())->getConnection();
     }
 
     public function insert(array $data) {

@@ -9,14 +9,14 @@ function edit(id) {
 
 	document.getElementById('articles__form--button').onclick = () => {
 		const data = {
+            'id': id,
 			'name': document.getElementById('name').value,
 			'description': document.getElementById('description').value,
 			'image': document.getElementById('image').value
 		}
 
-		console.log(`${method} ${id} ${data}`);
 
-		fetch(`/api/articles/${id}`, {
+		fetch(`/api/articles/`, {
 			method: 'PUT',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(data)
