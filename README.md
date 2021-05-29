@@ -1,5 +1,10 @@
-# Proyecto intersemestral
-#### Materia: Desarrollo Web
+# Web app with handmade backend
+
+## Technologies
+- PHP
+- Javascript
+- HTML
+- CSS
 
 ---
 

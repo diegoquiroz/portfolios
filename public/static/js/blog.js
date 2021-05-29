@@ -1,4 +1,3 @@
-// Author: Diego Quiroz
 let articles;
 let tag;
 let method;

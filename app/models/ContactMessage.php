@@ -1,5 +1,4 @@
 <?php
-// Author: Diego Quiroz
 
 class ContactMessage {
     
