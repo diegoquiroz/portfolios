@@ -17,10 +17,18 @@ class RouteController {
 	}
 
 	private static function validateRoute() {
-		foreach(self::$routes as $route) {
-            if ($route->getPath() === self::$requestUri && $route->getMethod() === self::$requestMethod) {
-                $action = $route->getAction();
-                $action();
+		foreach(self::$routes as $r) {
+            if ($r->getPath() === self::$requestUri && $r->getMethod() === self::$requestMethod) {
+                if ($r->getPath() === 'api') {
+                    $action = $r->getAction();
+                    $request = explode( '/', $r->getPath());
+
+                    $action($request);
+                    
+                } else {
+                    $action = $r->getAction();
+                    $action();
+                }
             }
 		}
 	}

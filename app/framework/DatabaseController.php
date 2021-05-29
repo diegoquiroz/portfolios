@@ -29,11 +29,15 @@ class DatabaseController {
         $this->user = 'root';
         $this->password = 'root';
         
-        $this->connection = new \PDO (
-            "mysql:host=$this->host;port=$this->port;charset=utf8mb4;dbname=$this->database",
-            $this->user,
-            $this->password
-        );
+        try {
+            $this->connection = new \PDO (
+                "mysql:host=$this->host;port=$this->port;charset=utf8mb4;dbname=$this->database",
+                $this->user,
+                $this->password
+            );
+        } catch(\PDOException $ex) {
+            echo $ex;
+        }
         
     }
 

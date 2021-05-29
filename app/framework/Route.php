@@ -9,32 +9,32 @@ class Route {
 	public static $action;
 
 	public function __construct(String $path, String $httpMethod, callable $action) {
-		self::$path = $path;
-		self::$httpMethod = $httpMethod;
-		self::$action = $action;
+		$this->path = $path;
+		$this->httpMethod = $httpMethod;
+	    $this->action = $action;
 	}
 
 	public function getPath() {
-		return self::$path;
+		return $this->path;
 	}
 
 	public function setPath(String $newPath) {
-		self::$path = $newPath;
+		$this->path = $newPath;
 	}
 
 	public function getMethod() {
-		return self::$httpMethod;
+		return $this->httpMethod;
 	}
 
 	public function setMethod(String $httpMethod) {
-		self::$httpMethod = $httpMethod;
+		$this->httpMethod = $httpMethod;
 	}
 
 	public function getAction() {
-		return self::$action;
+		return $this->action;
 	}
 
 	public function setAction(callable $action) {
-		self::$action = $action;
+		$this->action = $action;
 	}
 }
